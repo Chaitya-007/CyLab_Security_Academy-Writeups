@@ -5,10 +5,10 @@
 **Solution:**
 1. How Command Injection Works in Ping Forms => 
    - When a poorly secured web application takes user input and passes it directly to a system shell command behind the scenes, it looks something like this:
+  
    ``` bash
    # What the server executes internally:
-ping -c 2 [YOUR_INPUT]
- 
+   ping -c 2 [YOUR_INPUT] 
    ```
 2.  If the application fails to sanitize or validate what you type, you can use shell separators (like ;, &&, or |) to terminate the ping command early and chain a completely new command after it.
 3. Examples of Command Chaining => 
