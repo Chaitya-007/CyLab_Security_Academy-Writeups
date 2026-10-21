@@ -3,7 +3,8 @@
 **Problem:** Printer Shares.
 
 **Solution:**
-1. Connected via smb => smbclient -L //<IP_ADDRESS_or_HOSTNAME> -p <PORT> -N
+1. Connected via smb => 
+   ``` smbclient -L //<IP_ADDRESS_or_HOSTNAME> -p <PORT> -N ```
 2. -L lists shares
     -p 35629 specifies the non-standard port
     -N tries a null session (no password) — many CTF print-server boxes allow anonymous/guest access
