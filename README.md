@@ -6,7 +6,7 @@ Maintained by **Chaitanya Asole** · [LinkedIn](https://www.linkedin.com/in/chai
 
 ## Purpose
 
-- Keep a record of how I approach and solve problems, not just the answers.
+- Keep a record of how I approach and solve problems, not just the answer.
 - Practice explaining technical steps clearly, which is a core part of incident reporting.
 - Build a visible learning trail across networking, forensics, web security, and more.
 
