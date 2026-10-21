@@ -18,6 +18,6 @@
    ping -c 2 8.8.8.8; ls
    ```
    - This forces the server to return the directory contents to your screen.
-   b. Reading the Secret: If you spot a file like flag.txt or secret.txt, entering 8.8.8.8; cat flag.txt forces the server to read and print the file's contents back to you.
+   b. Reading the Secret: If you spot a file like flag.txt or secret.txt, entering ```bash 8.8.8.8; cat flag.txt``` forces the server to read and print the file's contents back to you.
 
 **Learned:** Command injection vulnerabilities in ping commands and how to exploit them for file listing and reading.
