@@ -1,4 +1,4 @@
-# Undo (picoCTF 2026, General Skills, Easy)
+# Printer Shares (picoCTF 2026, General Skills, Easy)
 
 **Problem:** Printer Shares.
 
