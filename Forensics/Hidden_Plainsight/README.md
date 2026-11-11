@@ -10,23 +10,23 @@
 ```bash
 exiftool image.jpg
 ```
-`exiftool` reads embedded metadata fields (Comment, Author, GPS data, etc.) that aren't visible when simply viewing the image. The `Comment` field contained a Base64-encoded string: c3RlZ2hpZGU6Y0VGNmVuZHZjbVE9
+`exiftool` reads embedded metadata fields (Comment, Author, GPS data, etc.) that aren't visible when simply viewing the image. The `Comment` field contained a Base64-encoded string: encoded_string_01
 
 2. Decoded the first Base64 string:
 ```bash
-echo "c3RlZ2hpZGU6Y0VGNmVuZHZjbVE9" | base64 -d
+echo "encoded_string_01" | base64 -d
 ```
-This revealed a `steghide:` prefix followed by a second, nested Base64-encoded passphrase: steghide:cEF6endvcmQ=
+This revealed a `steghide:` prefix followed by a second, nested Base64-encoded passphrase: steghide:encoded_string_02
 
 3. Decoded the second (inner) Base64 string to get the actual passphrase:
 ```bash
-echo "cEF6endvcmQ=" | base64 -d
+echo "encoded_string_02" | base64 -d
 ```
-Output: `pAzzword`
+Output: `phrase_for_steghide`
 
 4. Used `steghide` with the image and the recovered passphrase to extract the hidden payload:
 ```bash
-steghide extract -sf "img.jpg" -p "pAzzword"
+steghide extract -sf "img.jpg" -p "phrase_for_steghide"
 ```
 This extracted the hidden file, which contained the flag.
 
