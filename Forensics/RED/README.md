@@ -1,6 +1,9 @@
 RED
 
-1] wget <url_to_red_image> 
+1] Get the file
+```bash
+wget <url_to_red_image> 
+```
 
 2] check the file type using `file` command to confirm it's a disk image.
 
@@ -16,7 +19,7 @@ This confirms that the file is a PNG image, which is not a disk image.
 
 3] The meta-data contained a POEM. Upon checking the poem, it was found that the poem contained a hidden message. The message was encoded in the first letter of each line of the poem.
 
-4] CHECK LSB
+4] **CHECK LSB**
 
 5] Use steganography tools to extract hidden data from the image. `zsteg` to analyze the PNG file for any hidden information.
 
