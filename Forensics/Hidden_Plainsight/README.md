@@ -30,6 +30,22 @@ steghide extract -sf "img.jpg" -p "phrase_for_steghide"
 ```
 This extracted the hidden file, which contained the flag.
 
+
+Common Options
+
+• ```-sf <filename>``` or ```--stegofile <filename>```: Specifies the source image or audio file containing the hidden data.
+• ```-p <passphrase>``` or ```--passphrase <passphrase>```: Provides the passphrase directly in the command (if omitted, Steghide will prompt you interactively).
+• ```-xf <filename>``` or ```--extractfile <filename>```: Saves the extracted data to a specific file name instead of the original embedded name.
+• -f or --force: Overwrites any existing file with the same name without asking.
+
+Example
+
+To extract data from an image named stg.jpg:
+```bash
+steghide extract -sf stg.jpg
+```
+
+
 **Learned:** Steganography hides data *inside* a file's structure (not just its metadata) in a way that's invisible to the eye and often password-protected. Metadata fields like `Comment` are a common place attackers or challenge authors leave a clue or a layered hint (here, Base64 nested inside Base64) pointing toward the actual hidden payload and its passphrase.
 
 **Real-world relevance:** Steganography and metadata inspection are core forensic techniques — malware and data exfiltration sometimes hide payloads inside innocuous-looking image files, and `exiftool` + `steghide` are standard tools in a forensic analyst's toolkit for uncovering them.
